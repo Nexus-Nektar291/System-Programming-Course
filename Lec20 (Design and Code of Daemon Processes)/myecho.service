@@ -1,0 +1,14 @@
+[Unit]
+Description=myecho service by Muhammad Jilani
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/home/jilani/pwnEnv/bin/python3 /usr/local/bin/myechoserver.py
+
+[Install]
+WantedBy=multi-user.target
+Alias=myecho.service
